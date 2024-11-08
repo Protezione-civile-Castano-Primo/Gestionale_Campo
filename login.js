@@ -1,5 +1,5 @@
-// login.js
-// Aggiungi rate limiting per prevenire tentativi di brute force
+// Il riferimento a auth è già disponibile dal file firebase-init.js
+
 const rateLimiter = {
     attempts: {},
     maxAttempts: 5,
@@ -71,9 +71,6 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
         submitButton.disabled = true;
         
         const userCredential = await auth.signInWithEmailAndPassword(email, password);
-        
-        // Implementa CSP headers nel server
-        // Content-Security-Policy: default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; 
         
         // Imposta cookie sicuri
         document.cookie = "session=true; Secure; HttpOnly; SameSite=Strict";
