@@ -3,34 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Gestionale Protezione Civile</title>
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <title>Login Protezione Civile</title>
     <link rel="stylesheet" href="login.css">
-    <!-- ... altri tag head ... -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js"></script>
 </head>
 <body>
     <div class="container">
         <h1>Login Protezione Civile</h1>
-        <form id="loginForm">
-            <input type="text" id="email" placeholder="Email" required>
-            <input type="password" id="password" placeholder="Password" required>
+        <form id="loginForm" autocomplete="off">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required
+                       pattern="[^@\s]+@[^@\s]+\.[^@\s]+" 
+                       title="Inserisci un indirizzo email valido">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required
+                       minlength="8"
+                       title="La password deve essere di almeno 8 caratteri">
+            </div>
+            <div id="error-message" class="error" style="display: none; color: red;"></div>
             <button type="submit" class="btn">Accedi</button>
         </form>
     </div>
-    
-<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-
-<!-- Add Firebase products that you want to use -->
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
-
-<!-- Initialize Firebase -->
-<script src="firebase-init.js"></script>
-
-<!-- Your custom JavaScript -->
-<script src="login.js"></script>
-
+    <!-- Carica gli script alla fine per migliori performance -->
+    <script src="firebase-init.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>
