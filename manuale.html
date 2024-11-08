@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuale Completo - Sistema di Gestione Protezione Civile</title>
+    <link rel="stylesheet" href="manuale.css">
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Manuale Completo del Sistema di Gestione - Protezione Civile</h1>
+            <div class="font-size-controls">
+                <a href="index.html" class="home-button" title="Torna alla Home">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                    </svg>
+                </a>
+                <button id="decrease-font" title="Diminuisci dimensione testo">A-</button>
+                <button id="increase-font" title="Aumenta dimensione testo">A+</button>
+            </div>
+        </header>
+    
+
+        <div class="content">
+            <nav id="toc">
+                <h2>Indice</h2>
+                <ul>
+                    <li><a href="#introduzione">1. Introduzione</a></li>
+                    <li><a href="#login">2. Login</a></li>
+                    <li><a href="#dashboard">3. Dashboard Principale</a></li>
+                    <li><a href="#carraia">4. Gestione Carraia</a></li>
+                    <li><a href="#radio">5. Gestione Radio</a></li>
+                    <li><a href="#mezzi">6. Accessi/Uscite Mezzi</a></li>
+                    <li><a href="#volontari">7. Gestione Volontari</a></li>
+                    <li><a href="#allergeni">8. Gestione Allergeni</a></li>
+                    <li><a href="#pca">9. Posto Comando Avanzato (PCA)</a></li>
+                    <li><a href="#supporto">10. Supporto e Contatti</a></li>
+                </ul>
+            </nav>
+
+    <main>
+        <section id="introduzione" class="section">
+            <h2>1. Introduzione</h2>
+            <p>Benvenuti al manuale completo del Sistema di Gestione della Protezione Civile. Questo documento fornisce istruzioni dettagliate per l'utilizzo di tutte le componenti del sistema, dalla pagina di login alle funzionalità avanzate del Posto Comando Avanzato.</p>
+            <p>Il sistema è progettato per facilitare e ottimizzare la gestione delle operazioni di Protezione Civile, includendo funzionalità per:</p>
+            <ul>
+                <li>Gestione degli accessi e delle uscite dei mezzi</li>
+                <li>Coordinamento delle comunicazioni radio</li>
+                <li>Gestione dei volontari e delle loro competenze</li>
+                <li>Monitoraggio delle esigenze alimentari speciali</li>
+                <li>Coordinamento delle operazioni sul campo attraverso il Posto Comando Avanzato</li>
+            </ul>
+            <p>Questo manuale è strutturato in sezioni, ciascuna dedicata a una specifica componente del sistema. Si consiglia di familiarizzare con tutte le sezioni per sfruttare al meglio le potenzialità del sistema.</p>
+        </section>
+        <section id="login" class="section">
+            <h2>2. Login</h2>
+            
+            <h3>Scopo della Pagina</h3>
+            <ul>
+                <li>Punto di accesso principale per il sistema di gestione della Protezione Civile.</li>
+                <li>Autenticazione degli utenti autorizzati.</li>
+            </ul>
+        
+            <h3>Accesso alla Pagina</h3>
+            <p>URL: http://[indirizzo-del-sito]/login.html</p>
+        
+            <h3>Processo di Login</h3>
+            <ol>
+                <li>Inserire l'indirizzo email nel campo "Email".</li>
+                <li>Inserire la password associata nel campo "Password".</li>
+                <li>Cliccare sul pulsante "Accedi" o premere Invio.</li>
+            </ol>
+        
+            <h3>Gestione degli Errori</h3>
+            <p>In caso di credenziali errate o problemi di connessione, apparirà un alert con un messaggio di errore.</p>
+        
+            <h3>Risoluzione dei Problemi Comuni</h3>
+            <h4>Impossibilità di Accedere:</h4>
+            <ul>
+                <li>Verificare di star usando l'email corretta.</li>
+                <li>Assicurarsi che il Caps Lock non sia attivo.</li>
+                <li>Se si è dimenticata la password, contattare l'amministratore del sistema.</li>
+            </ul>
+        
+            <h4>Pagina Non Carica:</h4>
+            <ul>
+                <li>Controllare la connessione internet.</li>
+                <li>Provare a ricaricare la pagina.</li>
+                <li>Cancellare la cache del browser e riprovare.</li>
+            </ul>
+        </section>
+
+    </main>
+    <section id="dashboard" class="section">
+        <h2>3. Dashboard Principale</h2>
+        
+        <h3>Scopo della Pagina</h3>
+        <ul>
+            <li>Fornire accesso rapido a tutte le principali funzionalità del sistema.</li>
+            <li>Mostrare informazioni sull'utente attualmente connesso.</li>
+        </ul>
+    
+        <h3>Accesso alla Pagina</h3>
+        <ul>
+            <li>Dopo il login, si viene automaticamente reindirizzati a questa pagina.</li>
+            <li>URL: http://[indirizzo-del-sito]/index.html</li>
+        </ul>
+    
+        <h3>Elementi dell'Interfaccia</h3>
+        <h4>Informazioni Utente</h4>
+        <p>In alto alla pagina, viene visualizzato l'indirizzo email dell'utente attualmente connesso.</p>
+    
+        <h4>Pulsanti di Navigazione</h4>
+        <ul>
+            <li><strong>Carraia:</strong> Gestione degli ingressi e delle uscite dei veicoli.</li>
+            <li><strong>Radio:</strong> Sistema di gestione delle comunicazioni radio.</li>
+            <li><strong>Accessi/Uscite Mezzi:</strong> Gestione dei movimenti dei mezzi della Protezione Civile.</li>
+            <li><strong>Volontari:</strong> Gestione dei volontari.</li>
+            <li><strong>Allergeni:</strong> Gestione delle informazioni sugli allergeni.</li>
+            <li><strong>PCA:</strong> Posto di Comando Avanzato per la gestione delle emergenze.</li>
+        </ul>
+    
+        <h3>Funzionalità</h3>
+        <p>Cliccare su uno dei pulsanti per accedere alla sezione corrispondente. Ogni pulsante aprirà una nuova pagina specifica per quella funzionalità.</p>
+    
+        <h3>Sicurezza e Autenticazione</h3>
+        <ul>
+            <li>La pagina è accessibile solo agli utenti autenticati.</li>
+            <li>Se si tenta di accedere direttamente all'URL senza essere loggati, si verrà reindirizzati alla pagina di login.</li>
+        </ul>
+    
+        <h3>Risoluzione dei Problemi Comuni</h3>
+        <h4>Pulsanti Non Funzionanti:</h4>
+        <ul>
+            <li>Controllare che JavaScript sia abilitato nel browser.</li>
+            <li>Cancellare la cache del browser e riprovare.</li>
+        </ul>
+    
+        <h4>Informazioni Utente Non Visualizzate:</h4>
+        <ul>
+            <li>Effettuare il logout e poi di nuovo il login.</li>
+            <li>Verificare che non ci siano problemi con l'account Firebase.</li>
+        </ul>
+    
+    </section>
+    <section id="carraia" class="section">
+        <h2>4. Gestione Carraia</h2>
+        
+        <h3>Scopo della Pagina</h3>
+        <ul>
+            <li>Gestire gli ingressi e le uscite dei veicoli nell'area della Protezione Civile.</li>
+            <li>Registrare informazioni dettagliate su ogni veicolo che entra o esce.</li>
+            <li>Fornire una panoramica in tempo reale dei veicoli presenti nell'area.</li>
+        </ul>
+    
+        <h3>Accesso alla Pagina</h3>
+        <ul>
+            <li>Dalla dashboard principale, cliccare sul pulsante "Carraia".</li>
+            <li>URL: http://[indirizzo-del-sito]/carraia.html</li>
+        </ul>
+    
+        <h3>Elementi dell'Interfaccia</h3>
+        <h4>Sezione "Registra Ingresso"</h4>
+        <ul>
+            <li>Campi di input: Targa, Associazione, Modello del veicolo</li>
+            <li>Pulsante "Registra Ingresso"</li>
+            <li>Pulsanti rapidi per tipi di veicoli comuni (AUTO, MOTO, PICK-UP, AMBULANZA)</li>
+        </ul>
+    
+        <h4>Tabella "Ingressi/Uscite Registrate"</h4>
+        <p>Mostra tutti gli ingressi e le uscite registrati con colonne per: Targa, Associazione, Modello, Orario Ingresso, Orario Uscita, Azioni</p>
+    
+        <h3>Funzionalità Principali</h3>
+        <h4>1. Registrare un Nuovo Ingresso</h4>
+        <ol>
+            <li>Inserire la targa del veicolo nel campo "Targa".</li>
+            <li>Selezionare o digitare l'associazione nel campo "Associazione".</li>
+            <li>Scegliere o digitare il modello del veicolo nel campo "Modello".</li>
+            <li>Utilizzare i pulsanti rapidi per modelli comuni, se applicabile.</li>
+            <li>Cliccare su "Registra Ingresso".</li>
+        </ol>
+    
+        <h4>2. Registrare un'Uscita</h4>
+        <ol>
+            <li>Nella tabella "Ingressi/Uscite Registrate", trovare il veicolo desiderato.</li>
+            <li>Cliccare sul pulsante "Registra Uscita" nella colonna "Azioni".</li>
+        </ol>
+    
+        <h4>3. Eliminare un Ingresso</h4>
+        <ol>
+            <li>Nella tabella, trovare l'ingresso da eliminare.</li>
+            <li>Cliccare sul pulsante "Elimina" nella colonna "Azioni".</li>
+            <li>Confermare l'eliminazione nella finestra di dialogo.</li>
+        </ol>
+    
+        <h3>Funzionalità Avanzate</h3>
+        <h4>Autocompletamento</h4>
+        <p>I campi "Associazione" e "Modello" supportano l'autocompletamento. Iniziare a digitare per vedere suggerimenti basati su input precedenti.</p>
+    
+        <h4>Conversione Automatica in Maiuscolo</h4>
+        <p>Tutti gli input di testo vengono automaticamente convertiti in maiuscolo.</p>
+    
+        <h4>Verifica Targa Duplicata</h4>
+        <p>Il sistema controlla automaticamente se un veicolo con la stessa targa è già presente e non è ancora uscito.</p>
+    
+        <h3>Risoluzione dei Problemi Comuni</h3>
+        <h4>Ingresso Non Registrato</h4>
+        <ul>
+            <li>Verificare che tutti i campi siano compilati correttamente.</li>
+            <li>Controllare eventuali messaggi di errore visualizzati.</li>
+        </ul>
+    
+        <h4>Uscita Non Registrata</h4>
+        <ul>
+            <li>Assicurarsi che il veicolo sia effettivamente registrato come entrato.</li>
+            <li>Verificare la connessione internet.</li>
+        </ul>
+    
+        
+    </section>
+    <section id="radio" class="section">
+        <h2>5. Gestione Radio</h2>
+        
+        <h3>Scopo della Pagina</h3>
+        <ul>
+            <li>Gestire l'assegnazione e la riconsegna delle radio a volontari o mezzi.</li>
+            <li>Tenere traccia delle radio attualmente in uso e di quelle riconsegnate.</li>
+            <li>Fornire una panoramica in tempo reale delle assegnazioni delle radio.</li>
+        </ul>
+    
+        <h3>Accesso alla Pagina</h3>
+        <ul>
+            <li>Dalla dashboard principale, cliccare sul pulsante "Radio".</li>
+            <li>URL: http://[indirizzo-del-sito]/radio.html</li>
+        </ul>
+    
+        <h3>Elementi dell'Interfaccia</h3>
+        <h4>Sezione "Assegna Radio"</h4>
+        <ul>
+            <li>Campi di input: ID Radio, Assegnato a (Volontario o Mezzo), Identificativo, Orario (opzionale)</li>
+            <li>Pulsante "Assegna Radio"</li>
+        </ul>
+    
+        <h4>Tabella "Assegnazioni Radio"</h4>
+        <p>Mostra tutte le radio attualmente assegnate</p>
+    
+        <h4>Tabella "Radio Riconsegnate"</h4>
+        <p>Mostra tutte le radio che sono state riconsegnate</p>
+    
+        <h3>Funzionalità Principali</h3>
+        <h4>1. Assegnare una Nuova Radio</h4>
+        <ol>
+            <li>Inserire l'ID della radio nel campo "ID Radio".</li>
+            <li>Selezionare se la radio è assegnata a un Volontario o a un Mezzo.</li>
+            <li>Inserire l'identificativo del volontario o del mezzo.</li>
+            <li>Opzionalmente, inserire l'orario di assegnazione (se non inserito, verrà registrato automaticamente).</li>
+            <li>Cliccare su "Assegna Radio".</li>
+        </ol>
+    
+        <h4>2. Riconsegnare una Radio</h4>
+        <ol>
+            <li>Nella tabella "Assegnazioni Radio", trovare la radio da riconsegnare.</li>
+            <li>Cliccare sul pulsante "Riconsegna" nella colonna "Azioni".</li>
+            <li>La radio verrà spostata automaticamente nella tabella "Radio Riconsegnate".</li>
+        </ol>
+    
+        <h4>3. Modificare un'Assegnazione</h4>
+        <ol>
+            <li>Trovare l'assegnazione da modificare in una delle due tabelle.</li>
+            <li>Cliccare sul pulsante "Modifica" nella colonna "Azioni".</li>
+            <li>Effettuare le modifiche necessarie nei campi che appariranno.</li>
+            <li>Salvare le modifiche.</li>
+        </ol>
+    
+        <h4>4. Eliminare un'Assegnazione</h4>
+        <ol>
+            <li>Trovare l'assegnazione da eliminare in una delle due tabelle.</li>
+            <li>Cliccare sul pulsante "Elimina" nella colonna "Azioni".</li>
+            <li>Confermare l'eliminazione nella finestra di dialogo.</li>
+        </ol>
+    
+        <h3>Funzionalità Avanzate</h3>
+        <h4>Aggiornamento in Tempo Reale</h4>
+        <p>Le tabelle si aggiornano automaticamente quando vengono effettuate modifiche, senza necessità di ricaricare la pagina.</p>
+    
+        <h4>Conversione Automatica in Maiuscolo</h4>
+        <p>Tutti gli input di testo vengono automaticamente convertiti in maiuscolo per uniformità.</p>
+    
+        <h3>Risoluzione dei Problemi Comuni</h3>
+        <h4>Assegnazione Non Registrata</h4>
+        <ul>
+            <li>Verificare che tutti i campi obbligatori siano compilati correttamente.</li>
+            <li>Controllare eventuali messaggi di errore visualizzati.</li>
+        </ul>
+    
+        <h4>Radio Non Visualizzata nella Tabella</h4>
+        <ul>
+            <li>Assicurarsi che l'assegnazione sia stata effettuata correttamente.</li>
+            <li>Provare a ricaricare la pagina per aggiornare i dati.</li>
+        </ul>
+    
+    </section>
+    <section id="mezzi" class="section">
+        <h2>6. Accessi/Uscite Mezzi</h2>
+        
+        <h3>Scopo della Pagina</h3>
+        <ul>
+            <li>Monitorare in tempo reale i mezzi presenti all'interno del campo della Protezione Civile.</li>
+            <li>Visualizzare lo storico dei mezzi che sono entrati e usciti dal campo.</li>
+            <li>Fornire una panoramica rapida dello stato attuale dei veicoli (interno o uscito).</li>
+        </ul>
+    
+        <h3>Accesso alla Pagina</h3>
+        <ul>
+            <li>Dalla dashboard principale, cliccare sul pulsante "Accessi/Uscite Mezzi".</li>
+            <li>URL: http://[indirizzo-del-sito]/accessi_uscite_mezzi.html</li>
+        </ul>
+    
+        <h3>Elementi dell'Interfaccia</h3>
+        <h4>Sezione Filtri</h4>
+        <ul>
+            <li>Campo "Filtra per data": permette di selezionare una data specifica.</li>
+            <li>Pulsante "Applica Filtro": applica il filtro per la data selezionata.</li>
+            <li>Pulsante "Reset": rimuove il filtro e mostra tutti i dati.</li>
+        </ul>
+    
+        <h4>Sezione "Mezzi all'interno del campo"</h4>
+        <p>Visualizza cards per ogni mezzo attualmente presente nel campo.</p>
+    
+        <h4>Sezione "Mezzi usciti"</h4>
+        <p>Visualizza cards per ogni mezzo che è uscito dal campo.</p>
+    
+        <h3>Funzionalità Principali</h3>
+        <h4>1. Visualizzazione dei Mezzi</h4>
+        <p>Ogni mezzo è rappresentato da una card che contiene:</p>
+        <ul>
+            <li>Modello del veicolo</li>
+            <li>Targa</li>
+            <li>Associazione di appartenenza</li>
+            <li>Orario di ingresso</li>
+            <li>Orario di uscita (solo per i mezzi usciti)</li>
+            <li>Indicatore visivo (semaforo verde per mezzi interni, rosso per mezzi usciti)</li>
+        </ul>
+    
+        <h4>2. Filtraggio per Data</h4>
+        <ol>
+            <li>Selezionare una data utilizzando il campo "Filtra per data".</li>
+            <li>Cliccare su "Applica Filtro" per visualizzare solo i mezzi relativi alla data selezionata.</li>
+            <li>Per rimuovere il filtro e visualizzare tutti i dati, cliccare su "Reset".</li>
+        </ol>
+    
+        <h4>3. Aggiornamento in Tempo Reale</h4>
+        <p>Le informazioni si aggiornano automaticamente quando vengono effettuate modifiche nel database, senza necessità di ricaricare la pagina.</p>
+    
+        <h3>Interpretazione dei Dati</h3>
+        <h4>Mezzi all'interno del campo</h4>
+        <ul>
+            <li>Cards con bordo verde e semaforo verde.</li>
+            <li>Indicano i veicoli attualmente presenti nel campo.</li>
+        </ul>
+    
+        <h4>Mezzi usciti</h4>
+        <ul>
+            <li>Cards con bordo rosso e semaforo rosso.</li>
+            <li>Mostrano i veicoli che sono entrati e successivamente usciti dal campo.</li>
+        </ul>
+    
+        <h3>Funzionalità Avanzate</h3>
+        <h4>Responsività</h4>
+        <p>L'interfaccia si adatta automaticamente a schermi di diverse dimensioni. Su dispositivi mobili, le cards si ridimensionano per una migliore visualizzazione.</p>
+    
+        <h4>Effetti Visivi</h4>
+        <p>Le cards hanno un effetto hover che le evidenzia al passaggio del mouse.</p>
+    
+        <h3>Risoluzione dei Problemi Comuni</h3>
+        <h4>Dati Non Visualizzati</h4>
+        <ul>
+            <li>Verificare la connessione internet.</li>
+            <li>Assicurarsi di essere correttamente autenticati.</li>
+            <li>Provare a ricaricare la pagina.</li>
+        </ul>
+    
+        <h4>Filtro Non Funzionante</h4>
+        <ul>
+            <li>Assicurarsi di aver selezionato una data valida.</li>
+            <li>Cliccare su "Reset" e riprovare ad applicare il filtro.</li>
+        </ul>
+    
+    
+    </section>
+    <section id="volontari" class="section">
+        <h2>7. Gestione Volontari</h2>
+        
+        <h3>Scopo della Pagina</h3>
+        <ul>
+            <li>Registrare e gestire le informazioni dei volontari</li>
+            <li>Tracciare gli ingressi e le uscite dei volontari</li>
+            <li>Gestire i pasti e le esigenze alimentari (allergeni)</li>
+            <li>Fornire una panoramica in tempo reale dei volontari presenti e usciti</li>
+            <li>Facilitare la gestione dei ruoli e delle associazioni</li>
+        </ul>
+    
+        <h3>Accesso alla Pagina</h3>
+        <ul>
+            <li>Dalla dashboard principale, cliccare sul pulsante "Volontari".</li>
+            <li>URL: http://[indirizzo-del-sito]/volontari.html</li>
+        </ul>
+    
+        <h3>Elementi dell'Interfaccia</h3>
+        <h4>Sezione "Registra Volontario"</h4>
+        <ul>
+            <li>Campi di input: Nome, Cognome, Codice Fiscale, Associazione, Ruolo, Orario Ingresso, Orario Uscita (opzionale), Pasti, Allergeni, Note</li>
+            <li>Pulsante "Registra Volontario"</li>
+        </ul>
+    
+        <h4>Report Pasti</h4>
+        <p>Mostra il conteggio dei pasti per Colazione, Pranzo e Cena.</p>
+    
+        <h4>Barra di Ricerca</h4>
+        <p>Permette di cercare volontari per nome, cognome o codice fiscale.</p>
+    
+        <h4>Tabelle "Volontari Presenti" e "Volontari Usciti"</h4>
+        <p>Mostrano rispettivamente i volontari attualmente presenti e quelli che sono usciti.</p>
+    
+        <h3>Funzionalità Principali</h3>
+        <h4>1. Registrare un Nuovo Volontario</h4>
+        <ol>
+            <li>Compilare tutti i campi richiesti nel form "Registra Volontario".</li>
+            <li>Selezionare i pasti e gli allergeni pertinenti.</li>
+            <li>Cliccare su "Registra Volontario".</li>
+        </ol>
+    
+        <h4>2. Modificare un Volontario Esistente</h4>
+        <ol>
+            <li>Nella tabella dei volontari, trovare il volontario desiderato.</li>
+            <li>Cliccare sul pulsante "Modifica".</li>
+            <li>I dati del volontario verranno caricati nel form di registrazione.</li>
+            <li>Apportare le modifiche necessarie.</li>
+            <li>Cliccare su "Salva Volontario" (il pulsante cambierà testo).</li>
+        </ol>
+    
+        <h4>3. Segnare l'Uscita di un Volontario</h4>
+        <ol>
+            <li>Nella tabella "Volontari Presenti", trovare il volontario.</li>
+            <li>Cliccare sul pulsante "Segna Uscita".</li>
+            <li>Il volontario verrà spostato nella tabella "Volontari Usciti".</li>
+        </ol>
+    
+        <h4>4. Cercare un Volontario</h4>
+        <ol>
+            <li>Utilizzare la barra di ricerca sopra le tabelle.</li>
+            <li>Digitare il nome, cognome o codice fiscale del volontario.</li>
+            <li>La tabella si filtrerà automaticamente mostrando i risultati corrispondenti.</li>
+        </ol>
+    
+        <h4>5. Esportare Dati</h4>
+        <ol>
+            <li>Cliccare sul pulsante "Esporta Dati".</li>
+            <li>Un file CSV contenente tutti i dati dei volontari verrà scaricato.</li>
+        </ol>
+    
+        <h4>6. Importare Dati</h4>
+        <ol>
+            <li>Cliccare sul pulsante "Importa Dati".</li>
+            <li>Selezionare il file CSV contenente i dati dei volontari.</li>
+            <li>I dati verranno importati nel sistema.</li>
+        </ol>
+    
+        <h3>Funzionalità Avanzate</h3>
+        <h4>Autocompletamento Associazione</h4>
+        <p>Iniziare a digitare il nome dell'associazione nel campo apposito. Selezionare l'associazione dalla lista di suggerimenti che appare.</p>
+    
+        <h4>Gestione Ruoli</h4>
+        <p>Il menu a tendina "Ruolo" presenta opzioni predefinite, inclusi ruoli di responsabilità. I ruoli di responsabilità sono evidenziati con colori specifici sia nel menu che nelle tabelle.</p>
+    
+        <h4>Aggiornamento in Tempo Reale</h4>
+        <p>Le tabelle e il report pasti si aggiornano automaticamente quando vengono effettuate modifiche.</p>
+    
+        <h3>Risoluzione dei Problemi Comuni</h3>
+        <h4>Volontario Non Registrato</h4>
+        <ul>
+            <li>Verificare che tutti i campi obbligatori siano compilati correttamente.</li>
+            <li>Controllare eventuali messaggi di errore visualizzati.</li>
+        </ul>
+    
+        <h4>Dati Non Aggiornati</h4>
+        <ul>
+            <li>Provare a ricaricare la pagina.</li>
+            <li>Verificare la connessione internet.</li>
+        </ul>
+    
+        
+    </section>
+    <section id="allergeni" class="section">
+        <h2>8. Gestione Allergeni</h2>
+        
+        <h3>Scopo della Pagina</h3>
+        <ul>
+            <li>Visualizzare un riepilogo dei pasti richiesti dai volontari</li>
+            <li>Mostrare informazioni dettagliate sui volontari con allergie alimentari</li>
+            <li>Facilitare la gestione delle esigenze alimentari speciali</li>
+            <li>Fornire una rapida panoramica per il personale addetto alla preparazione dei pasti</li>
+        </ul>
+    
+        <h3>Accesso alla Pagina</h3>
+        <ul>
+            <li>Dalla dashboard principale, cliccare sul pulsante "Allergeni".</li>
+            <li>URL: http://[indirizzo-del-sito]/allergeni.html</li>
+        </ul>
+    
+        <h3>Elementi dell'Interfaccia</h3>
+        <h4>Sezione "Totale"</h4>
+        <p>Mostra il conteggio totale dei pasti richiesti:</p>
+        <ul>
+            <li>Colazione</li>
+            <li>Pranzo</li>
+            <li>Cena</li>
+        </ul>
+    
+        <h4>Sezione "Volontari con Allergeni"</h4>
+        <ul>
+            <li>Barra di ricerca per filtrare i volontari</li>
+            <li>Cards individuali per ogni volontario con allergie</li>
+        </ul>
+    
+        <h4>Card del Volontario</h4>
+        <ul>
+            <li>Nome e cognome del volontario</li>
+            <li>Associazione di appartenenza</li>
+            <li>Lista degli allergeni</li>
+            <li>Pasti richiesti</li>
+        </ul>
+    
+        <h3>Funzionalità Principali</h3>
+        <h4>1. Visualizzazione del Totale Pasti</h4>
+        <p>Il conteggio dei pasti viene aggiornato automaticamente in base ai dati dei volontari. Mostra il numero di colazioni, pranzi e cene richiesti.</p>
+    
+        <h4>2. Visualizzazione dei Volontari con Allergeni</h4>
+        <p>Ogni volontario con allergie è rappresentato da una card individuale. Le cards sono ordinate alfabeticamente per cognome e nome.</p>
+    
+        <h4>3. Ricerca dei Volontari</h4>
+        <ol>
+            <li>Utilizzare la barra di ricerca sopra le cards dei volontari.</li>
+            <li>Digitare il nome del volontario o il nome dell'associazione.</li>
+            <li>Le cards si filtreranno automaticamente mostrando solo i risultati corrispondenti.</li>
+        </ol>
+    
+        <h3>Interpretazione delle Informazioni sugli Allergeni</h3>
+        <ul>
+            <li>Ogni allergene è rappresentato da un tag colorato all'interno della card del volontario.</li>
+            <li>I pasti richiesti sono indicati con tag verdi.</li>
+        </ul>
+    
+        <h3>Dettagli Tecnici</h3>
+        <h4>Gestione degli Allergeni</h4>
+        <p>Il sistema utilizza una mappa predefinita di allergeni che include:</p>
+        <ul>
+            <li>Cereali contenenti glutine</li>
+            <li>Crostacei e derivati</li>
+            <li>Uova e derivati</li>
+            <li>Pesce e derivati</li>
+            <li>Arachidi e derivati</li>
+            <li>Soia e derivati</li>
+            <li>Latte e derivati</li>
+            <li>Frutta con guscio</li>
+            <li>Sedano e derivati</li>
+            <li>Senape e derivati</li>
+            <li>Sesamo e derivati</li>
+            <li>Anidride solforosa e solfiti</li>
+            <li>Lupini e derivati</li>
+            <li>Molluschi e derivati</li>
+        </ul>
+    
+        <h4>Aggiornamento in Tempo Reale</h4>
+        <p>I dati vengono aggiornati in tempo reale dal database Firebase. Ogni modifica ai dati dei volontari si riflette immediatamente sulla pagina.</p>
+    
+        <h3>Utilizzo Ottimale</h3>
+        <h4>Per il Personale di Cucina</h4>
+        <ul>
+            <li>Consultare il totale dei pasti per pianificare la preparazione.</li>
+            <li>Esaminare le cards dei volontari per identificare le esigenze alimentari speciali.</li>
+        </ul>
+    
+        <h4>Per i Coordinatori</h4>
+        <ul>
+            <li>Utilizzare la funzione di ricerca per trovare rapidamente informazioni su volontari specifici.</li>
+            <li>Monitorare il numero totale di pasti per la gestione delle risorse.</li>
+        </ul>
+    
+        <h3>Risoluzione dei Problemi Comuni</h3>
+        <h4>Dati Non Aggiornati</h4>
+        <ul>
+            <li>Verificare la connessione internet.</li>
+            <li>Provare a ricaricare la pagina.</li>
+        </ul>
+    
+        <h4>Volontario Non Visualizzato</h4>
+        <ul>
+            <li>Assicurarsi che il volontario abbia effettivamente delle allergie registrate.</li>
+            <li>Controllare che il volontario sia stato correttamente registrato nel sistema.</li>
+        </ul>
+    
+        
+    </section>
+    <section id="pca" class="section">
+        <h2>9. Posto Comando Avanzato (PCA)</h2>
+        
+        <h3>Scopo della Pagina</h3>
+        <ul>
+            <li>Gestire e monitorare i mezzi in operazione sul campo</li>
+            <li>Assegnare scenari operativi e responsabili ai mezzi</li>
+            <li>Tenere traccia della posizione e dello stato dei mezzi</li>
+            <li>Generare report rapidi sulle operazioni in corso</li>
+            <li>Facilitare la condivisione delle informazioni tra i membri del team</li>
+        </ul>
+    
+        <h3>Accesso alla Pagina</h3>
+        <ul>
+            <li>Dalla dashboard principale, cliccare sul pulsante "PCA".</li>
+            <li>URL: http://[indirizzo-del-sito]/pca.html</li>
+        </ul>
+    
+        <h3>Elementi dell'Interfaccia</h3>
+        <h4>Sezione "Aggiungi Mezzo in Operazione"</h4>
+        <ul>
+            <li>Campi di input: Mezzo (selezione da lista), Scenario (selezione da lista predefinita), Posizione, Associazione (compilato automaticamente), Responsabile Operazioni (selezione da lista)</li>
+            <li>Pulsante "Aggiungi Mezzo in Operazione"</li>
+        </ul>
+    
+        <h4>Sezione "Mezzi in Operazione"</h4>
+        <p>Visualizzazione a cards dei mezzi attualmente in operazione. Ogni card contiene:</p>
+        <ul>
+            <li>Nome del mezzo</li>
+            <li>Scenario</li>
+            <li>Posizione</li>
+            <li>Associazione</li>
+            <li>Responsabile</li>
+            <li>Pulsanti per modifica, stampa report e rimozione</li>
+        </ul>
+    
+        <h3>Funzionalità Principali</h3>
+        <h4>1. Aggiungere un Mezzo in Operazione</h4>
+        <ol>
+            <li>Selezionare il mezzo dal menu a tendina.</li>
+            <li>Scegliere lo scenario operativo.</li>
+            <li>Inserire la posizione attuale del mezzo.</li>
+            <li>L'associazione si compilerà automaticamente.</li>
+            <li>Selezionare il responsabile delle operazioni.</li>
+            <li>Cliccare su "Aggiungi Mezzo in Operazione".</li>
+        </ol>
+    
+        <h4>2. Modificare un Mezzo in Operazione</h4>
+        <ol>
+            <li>Cliccare sul pulsante di modifica (icona matita) sulla card del mezzo.</li>
+            <li>I dati del mezzo verranno caricati nel form di aggiunta.</li>
+            <li>Modificare i campi necessari.</li>
+            <li>Cliccare su "Aggiorna Mezzo in Operazione" per salvare le modifiche.</li>
+        </ol>
+    
+        <h4>3. Rimuovere un Mezzo dalle Operazioni</h4>
+        <ol>
+            <li>Cliccare sul pulsante di rimozione (icona X) sulla card del mezzo.</li>
+            <li>Confermare la rimozione nella finestra di dialogo.</li>
+        </ol>
+    
+        <h4>4. Stampa Report Mezzo</h4>
+        <ol>
+            <li>Cliccare sul pulsante di stampa (icona stampante) sulla card del mezzo.</li>
+            <li>Si aprirà una nuova finestra con il report formattato per la stampa.</li>
+            <li>Il report includerà tutti i dettagli del mezzo e la data/ora corrente.</li>
+        </ol>
+    
+        <h3>Funzionalità Avanzate</h3>
+        <h4>Aggiornamento in Tempo Reale</h4>
+        <p>I dati dei mezzi e dei responsabili si aggiornano automaticamente senza necessità di ricaricare la pagina.</p>
+    
+        <h4>Prevenzione Duplicati</h4>
+        <p>Il sistema impedisce l'aggiunta di un mezzo già in operazione, offrendo invece l'opzione di aggiornare lo scenario.</p>
+    
+        <h4>Visualizzazione Basata sullo Scenario</h4>
+        <p>Le cards dei mezzi sono colorate in base allo scenario operativo assegnato per una rapida identificazione visiva.</p>
+    
+        <h3>Risoluzione dei Problemi Comuni</h3>
+        <h4>Mezzo Non Visualizzato nella Lista</h4>
+        <ul>
+            <li>Verificare che il mezzo sia stato correttamente registrato nel sistema della carraia.</li>
+            <li>Controllare che il mezzo non sia già segnato come uscito dal campo.</li>
+        </ul>
+    
+        <h4>Responsabile Non Disponibile nella Lista</h4>
+        <ul>
+            <li>Assicurarsi che il volontario sia registrato con un ruolo di responsabilità (prefisso "Res.").</li>
+            <li>Verificare che il volontario sia attualmente presente nel sistema.</li>
+        </ul>
+    
+        <h4>Modifiche Non Salvate</h4>
+        <ul>
+            <li>Controllare la connessione internet.</li>
+            <li>Verificare di aver cliccato sul pulsante di salvataggio dopo le modifiche.</li>
+        </ul>
+    
+        <h3>Migliori Pratiche</h3>
+        <ul>
+            <li>Aggiornare regolarmente lo stato e la posizione dei mezzi per mantenere un quadro operativo accurato.</li>
+            <li>Utilizzare la funzione di stampa report per briefing rapidi o comunicazioni con altri reparti.</li>
+            <li>Formare adeguatamente il personale sull'uso corretto del sistema PCA per garantire un'efficace gestione delle operazioni.</li>
+        </ul>
+    
+        
+    </section>
+    <section id="supporto" class="section">
+        <h2>10. Supporto e Contatti</h2>
+        
+        <h3>Assistenza Generale</h3>
+        <p>Per qualsiasi problema o domanda relativa all'utilizzo del sistema, il primo punto di contatto è la segreteria della Protezione Civile.</p>
+        <ul>
+            <li>Email: procivcastano@gmail.com</li>
+            <li>Telefono: 339 4768695</li>
+        </ul>
+    
+        <h3>Supporto Tecnico</h3>
+        <p>Per problemi tecnici specifici con il sistema:</p>
+        <ul>
+            <li>Contattare il supporto IT in segreteria</li>
+            <li>Email: procivcastano@gmail.com</li>
+            <li>Telefono: 329 5908584</li>
+        </ul>
+    
+        <h3>Coordinatori di Settore</h3>
+        <p>Per questioni operative specifiche, contattare il coordinatore del settore interessato:</p>
+        <ul>
+            <li>Coordinatore Carraia: carraia@protezionecivile.it | 0123 456791</li>
+            <li>Coordinatore Radio: radio@protezionecivile.it | 0123 456792</li>
+            <li>Coordinatore Logistica (Mezzi): logistica@protezionecivile.it | 0123 456793</li>
+            <li>Coordinatore Volontari: volontari@protezionecivile.it | 0123 456794</li>
+            <li>Responsabile Sicurezza Alimentare: alimentazione@protezionecivile.it | 0123 456795</li>
+            <li>Coordinatore PCA: pca@protezionecivile.it | 0123 456796</li>
+        </ul>
+    
+        <h3>Procedure di Escalation</h3>
+        <ol>
+            <li>Per problemi non risolti, contattare il responsabile di turno</li>
+            <li>Per emergenze al di fuori dell'orario di lavoro, chiamare il numero di reperibilità: 329 5908584</li>
+        </ol>
+    
+        <h3>Feedback e Suggerimenti</h3>
+        <p>Per fornire feedback sul sistema o suggerire miglioramenti:</p>
+        <ul>
+            <li>Email: procivcastano@gmail.com</li>
+        </ul>
+    
+        <h3>Aggiornamenti e Manutenzione</h3>
+        <p>Per informazioni su aggiornamenti pianificati e manutenzione del sistema, consultare regolarmente la bacheca degli avvisi nella dashboard principale.</p>
+    
+        <h3>Formazione e Risorse Aggiuntive</h3>
+        <p>Per richieste di formazione o accesso a risorse aggiuntive:</p>
+        <ul>
+            <li>Contattare l'ufficio formazione o in segreteria: procivcastano@gmail.com</li>
+        </ul>
+    </section>
+    <script src="manuale.js"></script>
+</body>
+</html>

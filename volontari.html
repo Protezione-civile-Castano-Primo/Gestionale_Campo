@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Volontari - Protezione Civile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/css/autoComplete.min.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="volontari.css">
+</head>
+<body>
+    <div id="menu-placeholder"></div>
+
+    <div class="container">
+        <h1>Gestione Volontari</h1>
+        <div id="userInfo"></div>
+
+        <form id="registraVolontarioForm">
+            <h2>Registra Volontario</h2>
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="cognome">Cognome:</label>
+                <input type="text" id="cognome" required>
+            </div>
+            <div class="form-group">
+                <label for="codiceFiscale">Codice Fiscale:</label>
+                <input type="text" id="codiceFiscale" required>
+            </div>
+            <div class="form-group">
+                <label for="organizzazione">Associazione:</label>
+                <input type="text" id="organizzazione" name="organizzazione" required>
+            </div>
+            <div class="form-group">
+                <label for="ruolo">Ruolo:</label>
+                <select id="ruolo" required>
+                    <option value="">Seleziona un ruolo</option>
+                    <optgroup label="Responsabili">
+                        <option value="(Res.) Responsabile Operativo" class="responsabile bianco">(Res.) Responsabile Operativo</option>
+                        <option value="(Res.) Operazioni" class="responsabile rosso">(Res.) Operazioni</option>
+                        <option value="(Res.) Pianificazione" class="responsabile giallo">(Res.) Pianificazione</option>
+                        <option value="(Res.) Logistica" class="responsabile verde">(Res.) Logistica</option>
+                        <option value="(Res.) Segreteria" class="responsabile blu">(Res.) Segreteria</option>
+                        <option value="(Res.) Sicurezza" class="responsabile arancio">(Res.) Sicurezza</option>
+                    </optgroup>
+                    <optgroup label="Altri ruoli">
+                        <option value="Volontario">Volontario</option>
+                        <option value="Segreteria">Segreteria</option>
+                        <option value="Logistica">Logistica</option>
+                        <option value="Sicurezza">Sicurezza</option>
+                        <option value="Caposquadra">Caposquadra</option>
+                        <option value="Idrogeologico">Idrogeologico</option>
+                        <option value="Radio/GPS">Radio/GPS</option>
+                        <option value="Taglio/esbosco">Taglio/esbosco</option>
+                        <option value="Cucina">Cucina</option>
+                        <option value="Torrefaro">Torrefaro</option>
+                        <option value="Ricerca dispersi">Ricerca dispersi</option>
+                        <option value="Ospite">Ospite</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="form-group datetime-group">
+                <label for="orarioIngresso">Orario Ingresso:</label>
+                <input type="datetime-local" id="orarioIngresso" required>
+            </div>
+            <div class="form-group datetime-group">
+                <label for="orarioUscita">Orario Uscita (opzionale):</label>
+                <input type="datetime-local" id="orarioUscita">
+            </div>
+            <div class="form-group pasti-group">
+                <label>Pasti:</label>
+                <br>
+                <div class="checkbox-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="colazione">
+                        <span class="checkmark"></span>
+                        Colazione
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="pranzo">
+                        <span class="checkmark"></span>
+                        Pranzo
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="cena">
+                        <span class="checkmark"></span>
+                        Cena
+                    </label>
+                   <br>
+                    <hr width=100% size=2.5 color=000000>
+                    <br>
+                    <div class="form-group allergeni-group">
+                        <label>Allergeni:</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="allergeni" value="glutine"> Cereali contenenti glutine</label>
+                            <label><input type="checkbox" name="allergeni" value="crostacei"> Crostacei e derivati</label>
+                            <label><input type="checkbox" name="allergeni" value="uova"> Uova e derivati</label>
+                            <label><input type="checkbox" name="allergeni" value="pesce"> Pesce e derivati</label>
+                            <label><input type="checkbox" name="allergeni" value="arachidi"> Arachidi e derivati</label>
+                            <label><input type="checkbox" name="allergeni" value="soia"> Soia e derivati</label>
+                            <label><input type="checkbox" name="allergeni" value="latte"> Latte e derivati</label>
+                            <label><input type="checkbox" name="allergeni" value="frutta_guscio"> Frutta con guscio</label>
+                            <label><input type="checkbox" name="allergeni" value="sedano"> Sedano e derivati</label>
+                            <label><input type="checkbox" name="allergeni" value="senape"> Senape e derivati</label>
+                            <label><input type="checkbox" name="allergeni" value="sesamo"> Sesamo e derivati</label>
+                            <label><input type="checkbox" name="allergeni" value="solfiti"> Anidride solforosa e solfiti</label>
+                            <label><input type="checkbox" name="allergeni" value="lupini"> Lupini e derivati</label>
+                            <label><input type="checkbox" name="allergeni" value="molluschi"> Molluschi e derivati</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="altroAllergene">Altro allergene o intolleranza:</label>
+                        <input type="text" id="altroAllergene" name="altroAllergene" placeholder="Specifica altro allergene">
+                    </div>  
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="note">Note:</label>
+                <textarea id="note" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Registra Volontario</button>
+        </form>
+
+        <div id="reportPasti" class="pasti-report">
+            <div class="pasto-card">Colazione: <span id="numeroColazione">0</span></div>
+            <div class="pasto-card">Pranzo: <span id="numeroPranzo">0</span></div>
+            <div class="pasto-card">Cena: <span id="numeroCena">0</span></div>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Cerca volontario...">
+        </div>
+
+        <h2>Volontari Presenti</h2>
+        <table id="volontariPresentiTable">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Cognome</th>
+                    <th>Codice Fiscale</th>
+                    <th>Associazione</th>
+                    <th>Ruolo</th>
+                    <th>Ingresso</th>
+                    <th>Pasti</th>
+                    <th>Note</th>
+                    <th>Azioni</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <h2>Volontari Usciti</h2>
+        <table id="volontariUscitiTable">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Cognome</th>
+                    <th>Codice Fiscale</th>
+                    <th>Associazione</th>
+                    <th>Ruolo</th>
+                    <th>Ingresso</th>
+                    <th>Uscita</th>
+                    <th>Pasti</th>
+                    <th>Note</th>
+                    <th>Azioni</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <h2>Ospiti</h2>
+        <table id="ospitiTable">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Cognome</th>
+                    <th>Codice Fiscale</th>
+                    <th>Associazione</th>
+                    <th>Ingresso</th>
+                    <th>Uscita</th>
+                    <th>Pasti</th>
+                    <th>Note</th>
+                    <th>Azioni</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+       <!-- Pulsanti per esportare e importare dati -->
+       <div class="data-actions">
+        <button id="exportBtn" class="btn">Esporta Dati</button>
+        <input type="file" id="importFile" accept=".csv" style="display: none;">
+        <button id="importBtn" class="btn">Importa Dati</button>
+    </div>
+    
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/autoComplete.min.js"></script>
+    <script src="firebase-init.js"></script>
+    <script src="menu.js"></script>
+    <script src="volontari.js"></script>
+</body>
+</html>

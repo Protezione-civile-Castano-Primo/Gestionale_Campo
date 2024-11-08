@@ -1,0 +1,167 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #0056b3;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.pasti-report {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.pasto-card {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    flex: 1;
+    margin: 5px;
+    min-width: 100px;
+}
+
+.pasto-card span {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #0056b3;
+}
+
+#searchContainer {
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#allergeniCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border-left: 5px solid #0056b3;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #0056b3;
+    font-size: 1.2em;
+}
+
+.card p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.allergeni {
+    margin-top: 10px;
+    flex-grow: 1;
+}
+
+.allergeni strong, .pasti strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.allergeni span {
+    display: inline-block;
+    background-color: #ffcccb;
+    color: #d8000c;
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 1.0em;
+}
+
+.pasti {
+    margin-top: 10px;
+}
+
+.pasti span {
+    display: inline-block;
+    background-color: #90ee90;
+    color: #006400;
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-right: 5px;
+    font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .pasto-card {
+        flex-basis: calc(50% - 10px);
+        margin: 5px;
+    }
+
+    #allergeniCards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .card h2 {
+        font-size: 1.1em;
+    }
+
+    .allergeni span, .pasti span {
+        font-size: 0.8em;
+    }
+}
+
+.altro-allergene {
+    margin-top: 10px;
+}
+
+.altro-allergene input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Dettagliato</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="report.css">
+</head>
+<body>
+    <div id="menu-placeholder"></div>
+
+    <div class="container">
+        <h1>Report Dettagliato</h1>
+
+        <div id="sommario" class="section">
+            <h2>Sommario</h2>
+            <div class="report-grid">
+                <div class="report-card">
+                    <h3>Totale Mezzi</h3>
+                    <p id="totale-mezzi">Caricamento...</p>
+                </div>
+                <div class="report-card">
+                    <h3>Mezzi Presenti</h3>
+                    <p id="mezzi-presenti">Caricamento...</p>
+                </div>
+                <div class="report-card">
+                    <h3>Mezzi Usciti</h3>
+                    <p id="mezzi-usciti">Caricamento...</p>
+                </div>
+                <div class="report-card">
+                    <h3>Organizzazioni</h3>
+                    <p id="totale-organizzazioni">Caricamento...</p>
+                </div>
+                <div class="report-card">
+                    <h3>Totale Volontari</h3>
+                    <p id="totale-volontari">Caricamento...</p>
+                </div>
+                <div class="report-card">
+                    <h3>Volontari Presenti</h3>
+                    <p id="volontari-presenti">Caricamento...</p>
+                </div>
+                <div class="report-card">
+                    <h3>Volontari Usciti</h3>
+                    <p id="volontari-usciti">Caricamento...</p>
+                </div>
+                <div class="report-card">
+                    <h3>Pasti Previsti</h3>
+                    <p id="pasti-previsti">Caricamento...</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="grafici" class="section">
+            <div class="chart-container">
+                <h3>Suddivisione per Organizzazione</h3>
+                <canvas id="organizzazioni-chart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3>Mezzi per Tipo</h3>
+                <canvas id="tipi-mezzi-chart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3>Ingressi e Uscite per Ora</h3>
+                <canvas id="ingressi-uscite-chart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3>Volontari per Ruolo</h3>
+                <canvas id="volontari-ruolo-chart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3>Distribuzione Pasti</h3>
+                <canvas id="distribuzione-pasti-chart"></canvas>
+            </div>
+        </div>
+
+        <div id="tabella-mezzi" class="section">
+            <h2>Dettaglio Mezzi</h2>
+            <div class="table-container">
+                <table id="mezzi-table">
+                    <thead>
+                        <tr>
+                            <th>Targa</th>
+                            <th>Modello</th>
+                            <th>Organizzazione</th>
+                            <th>Ingresso</th>
+                            <th>Uscita</th>
+                            <th>Durata</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- I dati della tabella saranno inseriti qui dinamicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="tabella-volontari" class="section">
+            <h2>Dettaglio Volontari</h2>
+            <div class="table-container">
+                <table id="volontari-table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Cognome</th>
+                            <th>Organizzazione</th>
+                            <th>Ruolo</th>
+                            <th>Ingresso</th>
+                            <th>Uscita</th>
+                            <th>Pasti</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- I dati della tabella saranno inseriti qui dinamicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <button id="esporta-csv" class="btn">Esporta dati in CSV</button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="firebase-init.js"></script>
+    <script src="menu.js"></script>
+    <script src="report.js"></script>
+</body>
+</html>

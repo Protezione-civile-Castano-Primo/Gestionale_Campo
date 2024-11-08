@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posto Comando Avanzato (PCA)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="pca.css">
+</head>
+<body>
+    <div id="menu-placeholder"></div>
+
+    <div class="container">
+        <h1>Posto Comando Avanzato (PCA)</h1>
+        
+        <form id="pcaForm">
+            <div class="form-group">
+                <label for="mezzo">Mezzo:</label>
+                <select id="mezzo" required></select>
+            </div>
+            <div class="form-group">
+                <label for="scenario">Scenario:</label>
+                <select id="scenario" required>
+                    <option value="Idrogeologico">Idrogeologico</option>
+                    <option value="Taglio ed esbosco">Taglio ed esbosco</option>
+                    <option value="Illuminotecnica">Illuminotecnica</option>
+                    <option value="RPS">RPS</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="posizione">Posizione:</label>
+                <input type="text" id="posizione" required>
+            </div>
+            <div class="form-group">
+                <label for="associazione">Associazione:</label>
+                <input type="text" id="associazione" readonly>
+            </div>
+            <div class="form-group">
+                <label for="responsabile">Responsabile Operazioni:</label>
+                <select id="responsabile" required></select>
+
+                </div>
+                <div class="form-group">
+                    <label for="cellulare">Cellulare reperibilità:</label>
+                    <input type="text" id="cellulare" required>
+                </div>
+                
+            <button type="submit" class="btn">Aggiungi Mezzo in Operazione</button>
+        </form>
+
+        <h2>Mezzi in Operazione</h2>
+        <div id="mezziInOperazione"></div>
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="firebase-init.js"></script>
+    <script src="menu.js"></script>
+    <script src="pca.js"></script>
+</body>
+</html>

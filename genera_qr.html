@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genera QR Code</title>
+    <link rel="stylesheet" href="genera_qr.css">
+    <link rel="stylesheet" href="menu.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.0/build/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/autoComplete.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div id="menu-placeholder"></div>
+
+    <div class="container">
+        <h1>Genera QR Code Veicolo</h1>
+
+        <div id="userInfo"></div>
+
+        <div id="loadingIndicator" class="loading-indicator">
+            <i class="fas fa-spinner fa-spin"></i> Caricamento dati...
+        </div>
+
+        <form id="qrForm">
+            <div class="form-group">
+                <label for="targa">Targa*</label>
+                <div class="input-wrapper">
+                    <input type="text" id="targa" placeholder="Inserisci la targa" required>
+                    <div class="validation-feedback"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="associazione">Associazione*</label>
+                <div class="input-wrapper">
+                    <input type="text" id="associazione" placeholder="Inserisci l'associazione" required>
+                    <div class="validation-feedback"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="modello">Modello*</label>
+                <div class="input-wrapper">
+                    <input type="text" id="modello" placeholder="Inserisci il modello" required>
+                    <div class="validation-feedback"></div>
+                </div>
+            </div>
+
+            <div class="preview-container">
+                <h3>Anteprima Dati</h3>
+                <div id="dataPreview" class="data-preview"></div>
+            </div>
+
+            <button type="submit" class="btn" id="generateBtn">
+                <i class="fas fa-qrcode"></i> Genera QR Code
+            </button>
+        </form>
+
+        <div id="qrResult" class="qr-result">
+            <div id="qrCode"></div>
+            <div class="vehicle-info"></div>
+            <div class="button-group">
+                <button id="printBtn" class="btn btn-print">
+                    <i class="fas fa-print"></i> Stampa QR Code
+                </button>
+                <button id="downloadBtn" class="btn btn-download">
+                    <i class="fas fa-download"></i> Scarica QR Code
+                </button>
+                <button id="newQrBtn" class="btn btn-new">
+                    <i class="fas fa-plus"></i> Nuovo QR Code
+                </button>
+            </div>
+        </div>
+
+        <div id="feedback" class="feedback"></div>
+    </div>
+
+    <script src="firebase-init.js"></script>
+    <script src="menu.js"></script>
+    <script src="genera_qr.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Radio - Protezione Civile</title>
+    <link rel="stylesheet" href="radio.css">
+    <link rel="stylesheet" href="menu.css">
+    <!-- ... altri tag head ... -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <div id="menu-placeholder"></div>
+    <div class="container">
+        <h1>Gestione Radio</h1>
+        <div id="userInfo"></div>
+        <p>In questa pagina puoi assegnare una radio a un volontario o a un mezzo. Compila i campi sottostanti per assegnare una radio e visualizza le assegnazioni correnti nella tabella sottostante. L'orario può essere inserito manualmente o verrà registrato automaticamente al momento dell'assegnazione.</p>
+
+        <form id="assegnaRadioForm">
+            <div class="form-group">
+                <label for="idRadio">ID Radio:</label>
+                <input type="text" id="idRadio" required>
+            </div>
+            <div class="form-group">
+                <label for="assegnatoA">Assegnato a:</label>
+                <select id="assegnatoA">
+                    <option value="Volontario">Volontario</option>
+                    <option value="Mezzo">Mezzo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="identificativo">Identificativo:</label>
+                <input type="text" id="identificativo" required>
+            </div>
+            <div class="form-group">
+                <label for="orario">Orario (opzionale):</label>
+                <input type="time" id="orario">
+            </div>
+            <button type="submit" class="btn btn-primary">Assegna Radio</button>
+        </form>
+
+        <h2>Assegnazioni Radio</h2>
+        <table id="assegnazioniTable">
+            <thead>
+                <tr>
+                    <th>ID Radio</th>
+                    <th>Assegnato a</th>
+                    <th>Identificativo</th>
+                    <th>Orario</th>
+                    <th>Azioni</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Le righe verranno aggiunte dinamicamente con JavaScript -->
+            </tbody>
+        </table>
+
+        <h2>Radio Riconsegnate</h2>
+        <table id="riconsegnateTable">
+            <thead>
+                <tr>
+                    <th>ID Radio</th>
+                    <th>Assegnato a</th>
+                    <th>Identificativo</th>
+                    <th>Orario di uscita</th>
+                    <th>Orario di riconsegna</th>
+                    <th>Azioni</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Le righe verranno aggiunte dinamicamente con JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    
+    <!-- Initialize Firebase -->
+    <script src="firebase-init.js"></script>
+    <script src="menu.js"></script>
+    <script src="radio.js"></script>
+</body>
+</html>

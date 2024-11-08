@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessi/Uscite Mezzi - Protezione Civile</title>
+    <link rel="stylesheet" href="accessi_uscite_mezzi.css">
+    <link rel="stylesheet" href="menu.css">
+    <!-- ... altri tag head ... -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <div id="menu-placeholder"></div>
+    
+    <div class="container">
+        <h1>Accessi/Uscite Mezzi</h1>
+        <div id="userInfo"></div>
+        
+        <div id="filtri">
+            <label for="filtroData">Filtra per data:</label>
+            <input type="date" id="filtroData">
+            <button id="applicaFiltro" class="btn">Applica Filtro</button>
+            <button id="resetFiltro" class="btn">Reset</button>
+        </div>
+
+        <h2>Mezzi all'interno del campo</h2>
+        <div id="mezziInterni" class="card-container">
+            <!-- Le cards verranno inserite qui dinamicamente -->
+        </div>
+
+        <h2>Mezzi usciti</h2>
+        <div id="mezziUsciti" class="card-container">
+            <!-- Le cards verranno inserite qui dinamicamente -->
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    
+    <!-- Initialize Firebase -->
+    <script src="firebase-init.js"></script>
+    <script src="menu.js"></script>
+    <script src="accessi_uscite_mezzi.js"></script>
+</body>
+</html>

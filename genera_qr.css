@@ -1,0 +1,386 @@
+/* Stili di base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    width: 95%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #0056b3;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h3 {
+    color: #0056b3;
+    margin: 20px 0 10px 0;
+}
+
+/* Loading indicator */
+.loading-indicator {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    color: #0056b3 !important;
+    font-size: 18px;
+}
+
+.loading-indicator i {
+    margin-right: 10px;
+}
+
+/* Form elements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #ffffff;
+    color: #333;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0,86,179,0.3);
+}
+
+/* Validation feedback */
+.validation-feedback {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #dc3545 !important;
+    display: none;
+}
+
+.validation-feedback.valid {
+    color: #28a745 !important;
+}
+
+/* Preview container */
+.preview-container {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px 0;
+    color: #333;
+}
+
+.data-preview {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.preview-item {
+    margin: 5px 0;
+    color: #333;
+}
+
+.preview-empty {
+    color: #6c757d;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Buttons */
+.btn {
+    background-color: #0056b3;
+    color: white !important;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin: 10px 0;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn i {
+    margin-right: 8px;
+    color: white !important;
+}
+
+.btn:hover {
+    background-color: #003d82;
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-print {
+    background-color: #28a745;
+    color: white !important;
+}
+
+.btn-print:hover {
+    background-color: #218838;
+}
+
+.btn-download {
+    background-color: #17a2b8;
+    color: white !important;
+}
+
+.btn-download:hover {
+    background-color: #138496;
+}
+
+.btn-new {
+    background-color: #6c757d;
+    color: white !important;
+}
+
+.btn-new:hover {
+    background-color: #5a6268;
+}
+
+.button-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* QR Result */
+.qr-result {
+    display: none;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#qrCode {
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: inline-block;
+}
+
+#qrCode canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+.vehicle-info {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Feedback messages */
+.feedback {
+    display: none;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: 500;
+}
+
+.feedback.error {
+    background-color: #f8d7da;
+    color: #721c24 !important;
+    border: 1px solid #f5c6cb;
+}
+
+.feedback.success {
+    background-color: #d4edda;
+    color: #155724 !important;
+    border: 1px solid #c3e6cb;
+}
+
+.feedback.info {
+    background-color: #cce5ff;
+    color: #004085 !important;
+    border: 1px solid #b8daff;
+}
+
+/* Autocomplete styles */
+.autoComplete_wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.autoComplete_result {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ddd;
+    border-radius: 0 0 5px 5px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+    color: #333;
+}
+
+.autoComplete_result li {
+    padding: 10px;
+    cursor: pointer;
+    list-style: none;
+    color: #333;
+}
+
+.autoComplete_result li:hover {
+    background-color: #f0f0f0;
+}
+
+.autoComplete_highlighted {
+    color: #0056b3;
+    font-weight: bold;
+}
+
+/* Print styles */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    
+    .qr-result, .qr-result * {
+        visibility: visible;
+    }
+    
+    .qr-result {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    
+    .button-group {
+        display: none !important;
+    }
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    body {
+        background-color: #f0f0f0;
+        color: #333;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        padding: 15px;
+        background-color: #ffffff;
+    }
+    
+    h1 {
+        font-size: 24px;
+        color: #0056b3;
+    }
+
+    h2, h3 {
+        color: #0056b3;
+    }
+    
+    input[type="text"] {
+        font-size: 16px;
+        padding: 10px;
+        background-color: #ffffff;
+        color: #333;
+        border-color: #ddd;
+    }
+    
+    .button-group {
+        grid-template-columns: 1fr;
+    }
+    
+    .vehicle-info {
+        font-size: 16px;
+        background-color: #f8f9fa;
+        color: #333;
+    }
+    
+    #qrCode {
+        padding: 10px;
+        background-color: #ffffff;
+    }
+
+    .preview-container {
+        background-color: #f8f9fa;
+        border-color: #dee2e6;
+        color: #333;
+    }
+
+    .data-preview {
+        color: #333;
+    }
+
+    .preview-item {
+        color: #333;
+    }
+
+    .preview-empty {
+        color: #6c757d;
+    }
+
+    .autoComplete_result {
+        background-color: #ffffff;
+        color: #333;
+    }
+
+    .autoComplete_result li {
+        color: #333;
+    }
+}
+
+/* Override generale per garantire la visibilità del testo */
+* {
+    color: inherit;
+}
+
+.btn, .btn-print, .btn-download, .btn-new {
+    color: #ffffff !important;
+}
+
+#userInfo {
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}

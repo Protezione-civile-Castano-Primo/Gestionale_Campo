@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Carraia</title>
+    <link rel="stylesheet" href="carraia.css">
+    <link rel="stylesheet" href="menu.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsQR/1.4.0/jsQR.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/autoComplete.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div id="menu-placeholder"></div>
+
+    <div class="container">
+        <h1>Gestione Carraia</h1>
+        <div id="userInfo"></div>
+
+        <!-- Statistiche Rapide -->
+        <div class="stats-container">
+            <div class="stat-card">
+                <i class="fas fa-car"></i>
+                <h3>Mezzi Presenti</h3>
+                <span id="mezziPresenti">0</span>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-sign-out-alt"></i>
+                <h3>Usciti Oggi</h3>
+                <span id="mezziUsciti">0</span>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-clock"></i>
+                <h3>Ultimo Movimento</h3>
+                <span id="ultimoMovimento">-</span>
+            </div>
+        </div>
+
+        <!-- Controlli Principali -->
+        <div class="controls-container">
+            <button id="openScanner" class="btn btn-qr">
+                <i class="fas fa-qrcode"></i> Scansiona QR
+            </button>
+            <div class="search-box">
+                <input type="text" id="searchTarga" placeholder="Cerca targa...">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+
+        <!-- Form Registrazione -->
+        <form id="ingressoForm" class="registration-form">
+            <div id="errorMessage" class="error-message"></div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="targa"><i class="fas fa-car"></i> Targa</label>
+                    <input type="text" id="targa" placeholder="Inserisci targa" required>
+                </div>
+                <div class="form-group">
+                    <label for="associazione"><i class="fas fa-building"></i> Associazione</label>
+                    <input type="text" id="associazione" placeholder="Inserisci associazione" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="modello"><i class="fas fa-truck"></i> Modello</label>
+                    <input type="text" id="modello" placeholder="Inserisci modello" required>
+                </div>
+                <div class="form-group" id="veicoliRapidi">
+                    <button type="button" class="btn-rapido" data-modello="AUTO">AUTO</button>
+                    <button type="button" class="btn-rapido" data-modello="CARRELLO">CARRELLO</button>
+                    <button type="button" class="btn-rapido" data-modello="PICK-UP">PICK-UP</button>
+                    <button type="button" class="btn-rapido" data-modello="AMBULANZA">AMBULANZA</button>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-submit">
+                <i class="fas fa-plus-circle"></i> Registra Ingresso
+            </button>
+        </form>
+
+        <!-- Tabs per Presenti/Usciti -->
+        <div class="tabs-container">
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="presenti">
+                    <i class="fas fa-car"></i> Mezzi Presenti
+                </button>
+                <button class="tab-btn" data-tab="usciti">
+                    <i class="fas fa-history"></i> Storico Uscite
+                </button>
+            </div>
+
+            <div class="tab-content active" id="presenti">
+                <div class="mezzi-grid" id="mezziPresentiGrid"></div>
+            </div>
+
+            <div class="tab-content" id="usciti">
+                <div class="table-container">
+                    <table id="mezziUscititTable">
+                        <thead>
+                            <tr>
+                                <th>Targa</th>
+                                <th>Associazione</th>
+                                <th>Modello</th>
+                                <th>Orario Ingresso</th>
+                                <th>Orario Uscita</th>
+                                <th>Azioni</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ingressiBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Scanner -->
+        <div id="scannerModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Scanner QR Code</h2>
+                <select id="camera-select" class="camera-select">
+                    <option value="">Caricamento fotocamere...</option>
+                </select>
+                <video id="qr-video" playsinline></video>
+                <div id="scanner-status" class="status"></div>
+                <div class="scanner-controls">
+                    <button id="startScanner" class="btn">
+                        <i class="fas fa-play"></i> Avvia Scanner
+                    </button>
+                    <button id="stopScanner" class="btn" style="display: none;">
+                        <i class="fas fa-stop"></i> Ferma Scanner
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="firebase-init.js"></script>
+    <script src="menu.js"></script>
+    <script src="carraia.js"></script>
+</body>
+</html>
