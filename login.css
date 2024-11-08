@@ -19,31 +19,13 @@ h1 {
     text-align: center;
 }
 
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-input[type="text"], 
-input[type="password"],
-input[type="email"] {
+input[type="text"], input[type="password"] {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-sizing: border-box;
-}
-
-input:focus {
-    outline: none;
-    border-color: #0056b3;
-    box-shadow: 0 0 5px rgba(0,86,179,0.2);
 }
 
 .btn {
@@ -59,15 +41,4 @@ input:focus {
 
 .btn:hover {
     background-color: #003d82;
-}
-
-.btn:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
-}
-
-.error {
-    color: #dc3545;
-    margin-bottom: 10px;
-    font-size: 14px;
 }
